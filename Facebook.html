@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/78d2c71c45.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      #parent {
+        height: 100%;
+        width: 100vh;
+      }
+      #nav {
+        height: 60px;
+        width: 100vw;
+        display: flex;
+        box-shadow: 0 5px 5px rgb(215, 211, 203);
+      }
+      #logo {
+        background-image: url(./Image/download1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 55px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .box {
+        height: 40px;
+        width: 150px;
+        margin-top: 5px;
+        margin-left: 5px;
+        background-position: center;
+      }
+      #search-facebook {
+        height: 40px;
+        width: 300px;
+        border: rgb(138, 130, 130);
+        background-color: rgb(210, 199, 199);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #input-text {
+        width: 175px;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        font-weight: 400;
+        font-size: medium;
+        font-family: sans-serif;
+        margin-left: 25px;
+        background-color: rgb(210, 199, 199);
+      }
+      #search {
+        margin-left: 8px;
+        font-size: 25px;
+      }
+      #home-button {
+        height: 40px;
+        width: 115px;
+        border: rgb(138, 130, 130);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #home {
+        margin-left: 8px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #home:hover {
+        border-bottom: 1px solid blue;
+      }
+      #watch-button {
+        height: 40px;
+        width: 120px;
+        border: rgb(138, 130, 130);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #watch {
+        margin-left: 8px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #watch:hover {
+        border-bottom: 1px solid blue;
+      }
+      #marketplace-button {
+        height: 40px;
+        width: 120px;
+        border: rgb(138, 130, 130);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #marketplace {
+        margin-left: 8px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #marketplace:hover {
+        border-bottom: 1px solid blue;
+      }
+      #group-button {
+        height: 40px;
+        width: 120px;
+        border: rgb(138, 130, 130);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #Group {
+        margin-left: 8px;
+        font-size: 55px;
+        padding: 10px 20px;
+      }
+      #group:hover {
+        border-bottom: 1px solid blue;
+      }
+      #gamming-button {
+        height: 40px;
+        width: 120px;
+        border: rgb(138, 130, 130);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #gamming {
+        margin-left: 8px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #gamming:hover {
+        border-bottom: 1px solid blue;
+      }
+      #menu-button {
+        height: 40px;
+        width: 120px;
+        border: rgb(138, 130, 130);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #menu {
+        margin-left: 8px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #menu:hover {
+        border-bottom: 1px solid blue;
+      }
+      #messenger-button {
+        height: 40px;
+        width: 120px;
+        border: rgb(138, 130, 130);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #messenger {
+        margin-left: 8px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #messenger:hover {
+        border-bottom: 1px solid blue;
+      }
+      #notification-button {
+        height: 40px;
+        width: 100px;
+        border: rgb(138, 130, 130);
+        border-radius: 15px;
+        margin-left: 8px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #notification {
+        margin-left: 8px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #notification:hover {
+        border-bottom: 1px solid blue;
+      }
+      #profile {
+        height: 30px;
+        width: 15px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid;
+        background-image: url(./Image/sai.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 10px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #profile:hover {
+        border-bottom: 1px solid blue;
+      }
+      #nav1 {
+        width: 100vw;
+        display: flex;
+        border: none;
+        margin-top: 5px;
+        background-color: rgb(237, 247, 244);
+        /* justify-content: center; */
+      }
+      #box1 {
+        width: 300px;
+        height: 100vh;
+        border: none;
+        margin-top: 10px;
+      }
+      .box-side1 {
+        width: 300px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(230, 246, 241);
+        border-radius: 10px;
+      }
+      .box-side1:hover {
+        border: 1px solid rgb(200, 191, 191);
+        border-radius: 10px;
+        background-color: rgb(212, 219, 217);
+      }
+      #friend {
+        margin-left: 10px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #saved {
+        margin-left: 10px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #pages {
+        margin-left: 10px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #events {
+        margin-left: 10px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #favorites {
+        margin-left: 10px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #group {
+        margin-left: 10px;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      #box2 {
+        width: 500px;
+        height: 350px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-left: 60px;
+        background-color: white;
+        display: flex;
+      }
+      .box-side2 {
+        width: 166px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        box-shadow: 0px 2px 0px rgb(190, 186, 186);
+      }
+      .box-side2:hover {
+        width: 166px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        border-bottom: 1.5px solid rgb(4, 4, 170);
+        background-color: rgb(213, 208, 208);
+        align-items: center;
+      }
+      #story {
+        height: 240px;
+        width: 470px;
+        border: none;
+        margin-top: 50px;
+        margin-left: 11px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+      }
+      #stories1 {
+        width: 105px;
+        height: 220px;
+        border: 1px solid rgb(209, 204, 204);
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+        font-weight: 300;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: azure;
+        background-image: url(./Image/sai.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #stories2 {
+        width: 105px;
+        height: 220px;
+        border: 1px solid rgb(209, 204, 204);
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+        font-weight: 300;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: azure;
+        background-image: url(./Image/2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #stories3 {
+        width: 105px;
+        height: 220px;
+        border: 1px solid rgb(209, 204, 204);
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+        font-weight: 300;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: azure;
+        background-image: url(./Image/3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #stories4 {
+        width: 105px;
+        height: 220px;
+        border: 1px solid rgb(209, 204, 204);
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+        font-weight: 300;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: azure;
+        background-image: url(./Image/cat.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #stories5 {
+        width: 105px;
+        height: 220px;
+        border: 1px solid rgb(209, 204, 204);
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+        font-weight: 300;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: azure;
+        background-image: url(./Image/cat.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #story1 {
+        height: 240px;
+        width: 498px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        margin-top: 50px;
+        margin-left: 1px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+      }
+      #box3 {
+        width: 300px;
+        height: 100vh;
+        border: none;
+        margin-top: 10px;
+        margin-left: 60px;
+      }
+      .box-side3 {
+        width: 300px;
+        height: 50px;
+        display: flex;
+        /* align-items: center; */
+        background-color: rgb(230, 246, 241);
+        border-radius: 10px;
+        font-weight: 300;
+        font-size: 20;
+      }
+      #sponsored {
+        height: 160px;
+        border-bottom: 1px solid rgb(212, 205, 205);
+      }
+      #birthday {
+        height: 160px;
+        border-bottom: 1px solid rgb(212, 205, 205);
+      }
+      #friend-request {
+        height: 160px;
+        border-bottom: 1px solid rgb(212, 205, 205);
+      }
+      #contact {
+        height: 160px;
+        border-bottom: 1px solid rgb(212, 205, 205);
+      }
+
+      .slick-previous {
+        height: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        position: relative;
+        top: 50%;
+      }
+      .slick-next {
+        height: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        position: relative;
+        top: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="nav">
+        <div id="logo"></div>
+        <div class="box" id="search-facebook">
+          <i class="fa fa-search" id="search" aria-hidden="true"></i>
+          <input id="input-text" type="text" placeholder="Search Facebook" />
+        </div>
+        <div class="box" id="home-button">
+          <i class="fa fa-home" id="home" aria-hidden="true"></i>
+        </div>
+        <div class="box" id="watch-button">
+          <i class="fa fa-home" id="watch" aria-hidden="true"></i>
+        </div>
+        <div class="box" id="marketplace-button">
+          <i class="fa-sharp fa-solid fa-store" id="marketplace"></i>
+        </div>
+        <div class="box" id="group-button">
+          <i class="fa-duotone fa-users-rectangle" id="group"></i>
+        </div>
+        <div class="box" id="gamming-button">Gamming</div>
+        <div class="box" id="menu-button">
+          <i class="fa-sharp fa-solid fa-square-list" id="menu"></i>
+        </div>
+        <div class="box" id="messenger-button">
+          <i class="fa-brands fa-facebook-messenger" id="messenger"></i>
+        </div>
+        <div class="box" id="notification-button">
+          <i class="fa-sharp fa-solid fa-bell" id="notification"></i>
+        </div>
+        <div class="box" id="profile"></div>
+      </div>
+      <div id="nav1">
+        <div id="box1">
+          <div class="box-side1">
+            <i class="fa-regular fa-user-group" id="friend"></i>Friends
+          </div>
+          <div class="box-side1">Most Recent</div>
+          <div class="box-side1">
+            <i class="fa-solid fa-users-medical" id="group"></i>Groups
+          </div>
+          <div class="box-side1">
+            <i class="fa-sharp fa-solid fa-store" id="marketplace"></i>
+            Marketplace
+          </div>
+          <div class="box-side1">Watch</div>
+          <div class="box-side1">Memories</div>
+          <div class="box-side1">
+            <i class="fa-solid fa-bookmark" id="saved"></i>Saved
+          </div>
+          <div class="box-side1">
+            <i class="fa-solid fa-flag" id="pages"></i>Page
+          </div>
+          <div class="box-side1">
+            <i class="fa-regular fa-calendar-star" id="events"></i>Events
+          </div>
+          <div class="box-side1">
+            <i class="fa-solid fa-star" id="favorites"></i>Favorites
+          </div>
+          <div class="box-side1">See More</div>
+        </div>
+        <div id="box2">
+          <div class="box-side2">
+            Stories
+            <div id="story" class="carou">
+              <img
+                id="stories1"
+                src="./Image/1.jpg"
+                width="105px"
+                height="220px"
+              />
+              <img
+                id="stories2"
+                src="./Image/2.jpg"
+                width="105px"
+                height="220px"
+              />
+              <img
+                id="stories3"
+                src="./Image/3.jpg"
+                width="105px"
+                height="220px"
+              />
+              <img
+                id="stories4"
+                src="./Image/cat.jpg"
+                width="105px"
+                height="220px"
+              />
+              <img
+                id="stories5"
+                src="./Image/cat.jpg"
+                width="105px"
+                height="220px"
+              />
+            </div>
+            <div id="story1">
+              <div id="story1-1"></div>
+              <div id="story1-2"></div>
+              <div id="story1-3"></div>
+            </div>
+          </div>
+          <div class="box-side2">Reels</div>
+          <div class="box-side2">Rooms</div>
+        </div>
+        <div id="box3">
+          <div class="box-side3" id="sponsored">Sponsored</div>
+          <div class="box-side3" id="birthday">Birthdays</div>
+          <div class="box-side3" id="friend-request">Friends Requests</div>
+          <div class="box-side3" id="contact">Contacts</div>
+        </div>
+        <div id="box4"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".carou").slick({
+          autoplay: false,
+          slidesToShow: 3,
+          prevArrow:
+            '<button type="button" class="slick-previous"> < </button>',
+          nextArrow: '<button type="button" class="slick-next"> > </button>',
+        });
+      });
+    </script>
+  </body>
+</html>
